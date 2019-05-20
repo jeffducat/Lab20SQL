@@ -1,0 +1,59 @@
+
+------------Lab 19-----------------------
+--SELECT * FROM dbo.Customers;
+--SELECT DISTINCT Country FROM dbo.Customer;
+--SELECT CustomerID FROM dbo.Customers WHERE CustomerID LIKE '%BI%';
+--SELECT TOP 100 OrderID FROM dbo.Orders;
+--SELECT * FROM dbo.Customers WHERE PostalCode IN ('1010', '3012', '12209', '05023');
+--SELECT * FROM dbo.Orders WHERE ShipRegion IS NOT NULL;
+--SELECT * FROM dbo.Customers ORDER BY Country, City;
+--INSERT INTO dbo.Customers (CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax)
+--VALUES ('JEFDU', 'Grand Circus', 'Jeff Ducat', 'Student', 'Woodward', 'Detroit', 'MI', '48237', 'USA', '999-9999999', '999-9999999');
+--UPDATE dbo.Orders
+--SET ShipRegion = 'EuroZone'
+--WHERE ShipCountry = 'France';
+--DELETE FROM dbo.[Order Details] WHERE Quantity = '1';
+--SELECT * FROM dbo.[Order Details];
+--SELECT AVG(Quantity)
+--FROM dbo.[Order Details];
+--SELECT MAX(Quantity)
+--FROM dbo.[Order Details];
+--SELECT MIN(Quantity)
+--FROM dbo.[Order Details];
+--SELECT AVG(Quantity)
+--FROM dbo.[Order Details]
+--Group by OrderID;
+--SELECT MAX(Quantity)
+--FROM dbo.[Order Details]
+--Group By OrderID;
+--SELECT MIN(Quantity)
+--FROM dbo.[Order Details]
+--Group by OrderID;
+--Select * From dbo.Orders WHERE OrderID = '10290';
+--SELECT Orders.CustomerID, Customers.CustomerID, Orders.OrderDate
+--FROM Orders
+--INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+--SELECT * FROM Orders LEFT JOIN Customers
+--ON Orders.CustomerID = Customers.CustomerID;
+--SELECT * FROM Orders RIGHT JOIN Customers
+--ON Orders.CustomerID = Customers.CustomerID;
+--SELECT FirstName FROM dbo.Employees WHERE ReportsTo IS NULL; 
+--SELECT FirstName FROM dbo.Employees Where ReportsTo = 2;
+--------------------Bonus 20----------------------------
+--SELECT * FROM dbo.Customers;
+--SELECT * FROM dbo.customers WHERE City IN ('Paris', 'London');
+--SELECT Distinct City FROM dbo.Customers WHERE City IS NOT NULL;
+--SELECT FirstName FROM dbo.Employees ORDER BY FirstName;
+--SELECT * FROM dbo.Employees WHERE Notes LIKE '%BA%';
+--SELECT UnitPrice * Quantity - (UnitPrice * Quantity * Discount) FROM dbo.[Order Details];
+--SELECT * FROM dbo.employees WHERE HireDate > '1994-01-01 00:00:00.000';
+--SELECT HireDate From dbo.employees DATEDIFF(year, HireDate FROM dbo.employees, GETDATE()); --come back to this one
+--SELECT * FROM dbo.Products ORDER BY UnitsInStock DESC;
+--SELECT * FROM dbo.Products ORDER BY UnitsInStock ASC;
+--SELECT * FROM dbo.Products WHERE UnitsInStock < 6;
+--SELECT * FROM dbo.Products WHERE Discontinued > 0; 
+--SELECT * FROM dbo.Products WHERE ProductName LIKE '%Tofu%'; 
+--SELECT MAX(UnitPrice) FROM dbo.Products; --come back to this one
+--SELECT * FROM dbo.employees WHERE HireDate > '1993-01-01 00:00:00.000';
+--SELECT * FROM dbo.employees Where TitleOfCourtesy IN ('Ms.', 'Mrs.'); 
+--SELECT * FROM dbo.Employees WHERE HomePhone LIKE '%206%';
